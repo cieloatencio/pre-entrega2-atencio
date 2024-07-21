@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Gam.lop</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #9BA9FF;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #6B5B95;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+        }
+        header h1 img {
+            max-height: 270px;
+            display: block;
+            margin: 0 auto;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+            color: #6B5B95;
+        }
+        h2 {
+            color: #53477A;
+        }
+        section#contacto {
+            background-color: #AFB1FF;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        section#contacto form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        section#contacto form label, 
+        section#contacto form input, 
+        section#contacto form textarea, 
+        section#contacto form button {
+            margin: 10px 0;
+            width: 80%;
+            max-width: 500px;
+        }
+        section#contacto form input, 
+        section#contacto form textarea {
+            padding: 10px;
+            border: 1px solid #6B5B95;
+            border-radius: 5px;
+        }
+        section#contacto form button {
+            background-color: #6B5B95;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        section#contacto form button:hover {
+            background-color: #53477A;
+        }
+        footer {
+            background-color: #6B5B95;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><img src="img/logo.png" alt="Gam.lop"></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="product.html">Productos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form onsubmit="enviarMensaje(event)">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Gam.lop. Todos los derechos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

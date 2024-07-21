@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gam.lop - Tienda Gamer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Vidaloka', serif; /* Fuente principal */
+            background-color: #1a1a1a; /* Color de fondo */
+            color: #e0e0e0; /* Color del texto principal */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #424242; /* Color de fondo del encabezado */
+            color: #e0e0e0; /* Color del texto del encabezado */
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+        }
+        header h1 img {
+            max-height: 270px;
+            display: block;
+            margin: 0 auto;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #e0e0e0; /* Color del texto de los enlaces */
+            text-decoration: none;
+            font-family: 'Vidaloka', serif; /* Fuente para los enlaces */
+            font-size: 18px; /* Tamaño de fuente para los enlaces */
+        }
+        .search-bar {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .search-bar input {
+            padding: 10px;
+            width: 200px;
+            border: 1px solid #888B8D; /* Color del borde del campo de búsqueda */
+            border-radius: 5px;
+        }
+        .search-bar button {
+            background-color: #888B8D; /* Color de fondo del botón de búsqueda */
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .search-bar button:hover {
+            background-color: #1a1a1a; /* Color de fondo del botón de búsqueda al pasar el mouse */
+        }
+        main {
+            padding: 20px;
+        }
+        h2 {
+            color: #e0e0e0; /* Color del título principal */
+            text-align: center;
+        }
+        section#home {
+            text-align: center;
+            margin-top: 20px;
+        }
+        section#home img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        footer {
+            background-color: #424242; /* Color de fondo del pie de página */
+            color: #e0e0e0; /* Color del texto del pie de página */
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><img src="img/log.jpg" alt="Gam.lop"></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="hardware.html">Hardware Gamer</a></li> <!-- Enlace a Hardware Gamer -->
+                <li><a href="product.html">Productos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="checkout.html">Pagar</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <form onsubmit="buscarProducto(event)">
+                <input type="text" id="search-input" placeholder="Buscar productos...">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Bienvenidos a Gam.lop</h2>
+            <p>Tu tienda en línea para todo lo que necesitas en el mundo gamer.</p>
+            <img src="img/otaku.jpg" alt="Imagen Destacada">
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Gam.lop. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

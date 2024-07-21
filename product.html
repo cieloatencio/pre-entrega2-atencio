@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Electrónica - Gam.lop</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #363636; /* Color de fondo */
+            color: #EFEFEF; /* Color del texto principal */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2C2C2C; /* Color de fondo del encabezado */
+            color: #EFEFEF; /* Color del texto del encabezado */
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            margin-top: 10px;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #EFEFEF; /* Color del texto de los enlaces */
+            text-decoration: none;
+            font-family: 'Vidaloka', serif; /* Fuente de los enlaces */
+            font-size: 18px; /* Tamaño de fuente de los enlaces */
+        }
+        main {
+            padding: 20px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .product-item {
+            background-color: #535353; /* Color de fondo del contenedor del producto */
+            border: 1px solid #767676; /* Borde del contenedor del producto */
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .product-item:hover {
+            background-color: #2C2C2C; /* Color de fondo al pasar el mouse */
+            border-color: #EFEFEF; /* Borde al pasar el mouse */
+        }
+        .product-item img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .product-item h3 {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #EFEFEF; /* Color del título */
+        }
+        .product-item p {
+            font-size: 16px;
+            margin: 5px 0;
+            color: #EFEFEF; /* Color del texto */
+        }
+        .product-item button {
+            background-color: #767676; /* Color de fondo del botón */
+            border: none;
+            color: #EFEFEF; /* Color del texto del botón */
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .product-item button:hover {
+            background-color: #363636; /* Color de fondo al pasar el mouse */
+        }
+        footer {
+            background-color: #2C2C2C; /* Color de fondo del pie de página */
+            color: #EFEFEF; /* Color del texto del pie de página */
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gam.lop</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="product.html">Productos</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+                <li><a href="hardware.html">Hardware Gamer</a></li> 
+                <li><a href="checkout.html">Pagar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="product-grid">
+            <div class="product-item">
+                <img src="img/images.jpg" alt="Mouse Gamer">
+                <h3>Mouse Gamer</h3>
+                <p>Precio: $49.99</p>
+                <button onclick="agregarAlCarrito('Mouse Gamer', 49.99)">Agregar al Carrito</button>
+            </div>
+            <div class="product-item">
+                <img src="img/mousebasico.jpg" alt="Mouse Básico">
+                <h3>Mouse Básico</h3>
+                <p>Precio: $19.99</p>
+                <button onclick="agregarAlCarrito('Mouse Básico', 19.99)">Agregar al Carrito</button>
+            </div>
+            <div class="product-item">
+                <img src="img/teclado100.jpg" alt="Teclado Mecánico 100%">
+                <h3>Teclado Mecánico 100%</h3>
+                <p>Precio: $89.99</p>
+                <button onclick="agregarAlCarrito('Teclado Mecánico 100%', 89.99)">Agregar al Carrito</button>
+            </div>
+            <div class="product-item">
+                <img src="img/tecladorgb60.jpg" alt="Teclado RGB 60%">
+                <h3>Teclado RGB 60%</h3>
+                <p>Precio: $99.99</p>
+                <button onclick="agregarAlCarrito('Teclado RGB 60%', 99.99)">Agregar al Carrito</button>
+            </div>
+            <div class="product-item">
+                <img src="img/teclado50.jpg" alt="Teclado Membrana 50%">
+                <h3>Teclado Membrana 50%</h3>
+                <p>Precio: $49.99</p>
+                <button onclick="agregarAlCarrito('Teclado Membrana 50%', 49.99)">Agregar al Carrito</button>
+            </div>
+            <div class="product-item">
+                <img src="img/microprof.jpg" alt="Micrófono Profesional">
+                <h3>Micrófono Profesional</h3>
+                <p>Precio: $129.99</p>
+                <button onclick="agregarAlCarrito('Micrófono Profesional', 129.99)">Agregar al Carrito</button>
+            </div>
+            <div class="product-item">
+                <img src="img/microconde.jpg" alt="Micrófono Condensador">
+                <h3>Micrófono Condensador</h3>
+                <p>Precio: $139.99</p>
+                <button onclick="agregarAlCarrito('Micrófono Condensador', 139.99)">Agregar al Carrito</button>
+            </div>
+            <div class="product-item">
+                <img src="img/download (1).jpg" alt="Micrófono Básico">
+                <h3>Micrófono Básico</h3>
+                <p>Precio: $29.99</p>
+                <button onclick="agregarAlCarrito('Micrófono Básico', 29.99)">Agregar al Carrito</button>
+            </div>
+            <div class="product-item">
+                <img src="img/Monitor2460Hz.jpg" alt="Monitor 24 pulgadas 60Hz">
+                <h3>Monitor 24" 60Hz</h3>
+                <p>Precio: $199.99</p>
+                <button onclick="agregarAlCarrito('Monitor 24 pulgadas 60Hz', 199.99)">Agregar al Carrito</button>
+            </div>
+            <div class="product-item">
+                <img src="img/Monitor27144Hz.jpg" alt="Monitor 27 pulgadas 144Hz">
+                <h3>Monitor 27" 144Hz</h3>
+                <p>Precio: $299.99</p>
+                <button onclick="agregarAlCarrito('Monitor 27 pulgadas 144Hz', 299.99)">Agregar al Carrito</button>
+            </div>
+            <div class="product-item">
+                <img src="img/Monitor3260Hz.jpg" alt="Monitor 32 pulgadas 60Hz">
+                <h3>Monitor 32" 60Hz</h3>
+                <p>Precio: $349.99</p>
+                <button onclick="agregarAlCarrito('Monitor 32 pulgadas 60Hz', 349.99)">Agregar al Carrito</button>
+            </div>
+            <div class="product-item">
+                <img src="img/Monitor24144Hz.jpg" alt="Monitor 24 pulgadas 144Hz">
+                <h3>Monitor 24" 144Hz</h3>
+                <p>Precio: $249.99</p>
+                <button onclick="agregarAlCarrito('Monitor 24 pulgadas 144Hz', 249.99)">Agregar al Carrito</button>
+            </div>
+            <div class="product-item">
+                <img src="img/Mouse Pad XL.jpg" alt="Mouse Pad XL">
+                <h3>Mouse Pad XL</h3>
+                <p>Precio: $19.99</p>
+                <button onclick="agregarAlCarrito('Mouse Pad XL', 19.99)">Agregar al Carrito</button>
+            </div>
+            <div class="product-item">
+                <img src="img/Mouse Pad Grande.jpg" alt="Mouse Pad Grande">
+                <h3>Mouse Pad Grande</h3>
+                <p>Precio: $14.99</p>
+                <button onclick="agregarAlCarrito('Mouse Pad Grande', 14.99)">Agregar al Carrito</button>
+            </div>
+            <div class="product-item">
+                <img src="img/Mouse Pad Pequeño.jpg" alt="Mouse Pad Pequeño">
+                <h3>Mouse Pad Pequeño</h3>
+                <p>Precio: $9.99</p>
+                <button onclick="agregarAlCarrito('Mouse Pad Pequeño', 9.99)">Agregar al Carrito</button>
+            </div>
+        </section>
+    </main>
+    
+    
